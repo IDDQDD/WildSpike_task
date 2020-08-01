@@ -1,6 +1,6 @@
 #include <iostream>
 #include "figure.h"
-#include "intersects.h"
+#include "intersect.h"
 #include "test_runner.h"
 
 void TestIsIntesect();

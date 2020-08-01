@@ -1,4 +1,4 @@
-#include "intersects.h"
+#include "intersect.h"
 #include<cmath>
 
 double Direction(const Point& p1, const Point& p2,const Point& p3)
