@@ -3,18 +3,18 @@
 #include "intersects.h"
 #include "test_runner.h"
 
-void TestIntesects();
+void TestIsIntesect();
 
 int main(void)
 {
   TestRunner tr;
-  RUN_TEST(tr, TestIntesects);
+  RUN_TEST(tr, TestIsIntesect);
   return EXIT_SUCCESS;
 }
 
 
 
-void TestIntesects()
+void TestIsIntesect()
 {
   std::vector<std::pair<Figure, Figure>> Y_Intresects{
   {{Point(2,4), Point(4,2), Point(12,2), Point(12,6), Point(10,8), Point(4,8), Point(2,6),Point(10,8), Point(4,8), Point(2,6)},
@@ -39,7 +39,7 @@ void TestIntesects()
   
   for(auto& [figure1, figure2] : Y_Intresects)
   {
-     ASSERT(Intersects(figure1.Get_Coordinates(), figure2.Get_Coordinates()));
+     ASSERT(IsIntersect(figure1.Get_Coordinates(), figure2.Get_Coordinates()));
   }
 
   std::vector<std::pair<Figure,Figure>> N_intersects{
@@ -62,6 +62,6 @@ void TestIntesects()
 
   for(auto& [figure1, figure2] : N_intersects)
   {
-    ASSERT(!Intersects(figure1.Get_Coordinates(), figure2.Get_Coordinates()));
+    ASSERT(!IsIntersect(figure1.Get_Coordinates(), figure2.Get_Coordinates()));
   }
   }
