@@ -41,10 +41,8 @@ bool SegmentsIntersect(const Point& p1, const Point& p2,
 
 bool IsIntersect(const std::vector<Point>& a, const std::vector<Point>& b)
 {
- return a.size() > b.size() ? LinesIntersect(a, b) :
-                                          LinesIntersect(b, a); 
+ return  LinesIntersect(a, b);
 }
-
 
 bool LinesIntersect(const std::vector<Point>& lines1, const std::vector<Point>& lines2)
   {
