@@ -1,8 +1,7 @@
 #include "figure.h"
-Figure::Figure(std::initializer_list<Point> points)
+Figure::Figure(std::initializer_list<Point>&& points)
 {
-  
-  coordinates.insert(std::end(coordinates), std::move(points));
+  coordinates = points;
 }
 
   const std::vector<Point>& Figure::Get_Coordinates()
