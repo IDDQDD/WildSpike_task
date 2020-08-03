@@ -7,9 +7,9 @@ class Figure
   public:
 
   Figure() = delete;
-  Figure(std::initializer_list<Point>&& points);
+  Figure(std::initializer_list<Point>&& points) : coordinates(points){};
 
-  const std::vector<Point>& Get_Coordinates();
+  inline const std::vector<Point>& Get_Coordinates()  {return coordinates;}
 
   private:
   std::vector<Point> coordinates;
